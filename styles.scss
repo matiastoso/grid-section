@@ -1,9 +1,216 @@
 // Fuente
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,500&display=swap');
 
-// Estilos generales
+// Variables
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
 
+// Estilos generales
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     box-sizing: border-box;
+    background-color: $light-grayish-blue;
+}
+
+// Estilos del container
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+}
+
+// Estilos de la grilla
+.grid {
+    display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "daniel      daniel      jonathan    kira"
+                         "jeanette    patrick     patrick     kira";
+    gap: 1.5rem;
+
+    width: 90%;
+    padding: 3.5rem 0px;
+
+    .item {
+        box-shadow: 2px 2px 5px $light-gray;
+        border-radius: 1rem;
+
+        // Estilos del svg
+        &-quote {
+            z-index: -1;
+            position: absolute;
+            right: 4rem;
+        }
+
+        // Estilos del container
+        &-container {
+            padding: 1.5rem;
+
+            &-profile {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+                &-img {
+                    margin-right: 1.1rem;
+                    border-radius: 50%;
+                    width: 40px;
+                }    
+
+                &-information {
+                    h3{
+                        font-weight: 500;
+                        font-size: 1rem;
+                        margin-bottom: -11px;
+                        margin-top: 1.8rem;
+                    }
+
+                    p {
+                        font-size: 0.6rem;
+                        font-weight: $very-dark-grayish-blue;
+                    }
+                }
+            }
+
+            &-body {
+                margin-top: -15px;
+
+                &-header {
+                    font-size: 1.2rem;
+                }
+
+                &-text {
+                    font-size: 0.8rem;
+                    line-height: 1.2rem;
+                    letter-spacing: .7px;
+                }
+            }
+        }
+    }
+}
+
+// Estilos de los items
+.item:nth-child(1) {
+    grid-area: daniel;
+    z-index: 2;
+    position: relative;
+    background-color: $moderate-violet;
+    color: $light-gray;
+    
+    .item-container-profile-information-name {
+        color: $white;
+    }
+
+    .item-container-body-header {
+        color: $white;
+        font-weight: 600;
+    }
+
+    .item-container-body-text {
+        color: rgba(255, 255, 255, 0.514);
+    }
+
+    .item-container-profile-img:nth-child(1) {
+        border: 2px solid $light-gray;
+    }
+}
+
+.item:nth-child(2) {
+    grid-area: jonathan;
+    background-color: $very-dark-grayish-blue;
+    color: $light-gray;
+
+    .item-container-profile-information-name {
+        color: $white;
+    }
+
+    .item-container-body-header {
+        color: $white;
+        font-weight: 600;
+    }
+
+    .item-container-body-text {
+        color: rgba(255, 255, 255, 0.514);
+    }
+
+    .item-container-profile-img:nth-child(1) {
+        border: 2px solid $light-gray;
+    }
+}
+
+.item:nth-child(3) {
+    grid-area: jeanette;
+    background-color: $white;
+    color: $very-dark-blackish-blue;
+
+    .item-container-profile-information-name {
+        color: $very-dark-blackish-blue;
+    }
+
+    .item-container-body-header {
+        color: $very-dark-blackish-blue;
+        font-weight: 600;
+    }
+
+    .item-container-body-text {
+        color: rgba(128, 128, 128, 0.904);
+    }
+
+    .item-container-profile-img:nth-child(1) {
+        border: 2px solid $light-gray;
+    }
+}
+
+.item:nth-child(4) {
+    grid-area: patrick;
+    background-color: $very-dark-blackish-blue;
+    color: $light-gray;
+
+    .item-container-profile-information-name {
+        color: $white;
+    }
+
+    .item-container-body-header {
+        color: $white;
+        font-weight: 600;
+    }
+
+    .item-container-body-text {
+        color: rgba(255, 255, 255, 0.514);
+    }
+
+
+    .item-container-profile-img:nth-child(1) {
+        border: 2px solid $moderate-violet;
+    }
+}
+
+.item:nth-child(5) {
+    grid-area: kira;
+    background-color: $white;
+    color: $very-dark-blackish-blue;
+
+    .item-container-profile-information-name {
+        color: $very-dark-blackish-blue;
+    }
+
+    .item-container-body-header {
+        color: $very-dark-blackish-blue;
+        font-weight: 600;
+    }
+
+    .item-container-body-text {
+        color: rgba(128, 128, 128, 0.904);
+    }
+
+    .item-container-profile-img:nth-child(1) {
+        border: 2px solid $light-gray;
+    }
 }
