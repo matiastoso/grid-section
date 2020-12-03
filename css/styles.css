@@ -7,7 +7,7 @@ body { font-family: 'Barlow Semi Condensed', sans-serif; -webkit-box-sizing: bor
 
 .grid .item { -webkit-box-shadow: 2px 2px 5px #cfcfcf; box-shadow: 2px 2px 5px #cfcfcf; border-radius: 1rem; }
 
-.grid .item-quote { z-index: -1; position: absolute; right: 4rem; }
+.grid .item-quote { z-index: -1; position: absolute; right: 3rem; border-image-width: 5rem; }
 
 .grid .item-container { padding: 1.5rem; }
 
@@ -74,4 +74,9 @@ body { font-family: 'Barlow Semi Condensed', sans-serif; -webkit-box-sizing: bor
 .item:nth-child(5) .item-container-body-text { color: rgba(128, 128, 128, 0.904); }
 
 .item:nth-child(5) .item-container-profile-img:nth-child(1) { border: 2px solid #cfcfcf; }
+
+@media (max-width: 974px) { .grid { grid-template-areas: "daniel    jonathan" "jeanette  patrick" "kira      kira"; }
+  .item-quote { width: 5rem; } }
+
+@media (max-width: 720px) { .grid { width: 85%; grid-template-areas: "daniel" "jonathan" "jeanette" "patrick" "kira"; } }
 /*# sourceMappingURL=styles.css.map */

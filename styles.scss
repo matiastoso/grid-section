@@ -46,7 +46,8 @@ body {
         &-quote {
             z-index: -1;
             position: absolute;
-            right: 4rem;
+            right: 3rem;
+            border-image-width: 5rem;
         }
 
         // Estilos del container
@@ -212,5 +213,29 @@ body {
 
     .item-container-profile-img:nth-child(1) {
         border: 2px solid $light-gray;
+    }
+}
+
+// Responsive y media querys
+@media (max-width: 974px) {
+    .grid {
+        grid-template-areas: "daniel    jonathan"
+                             "jeanette  patrick"
+                             "kira      kira";
+    }
+
+    .item-quote {
+        width: 5rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .grid {
+        width: 85%;
+        grid-template-areas: "daniel"
+                             "jonathan"
+                             "jeanette"
+                             "patrick"
+                             "kira";
     }
 }
